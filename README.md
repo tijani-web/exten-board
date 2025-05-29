@@ -1,12 +1,22 @@
-# React + Vite
+# ExtenBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based extension manager UI where users can view, activate, deactivate, and remove browser extensions. Includes theme toggle (light/dark mode) and responsive layout.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📦 **Extension List UI** – Displays all, active, or inactive extensions
+- 🌗 **Theme Toggle** – Switch between dark and light mode with persistent preference
+- 🧠 **Smart Filtering** – Filter extensions by their status (All, Active, Inactive)
+- 🔁 **Toggle State** – Click to activate/deactivate any extension
+- ❌ **Remove Extensions** – Remove items from the extension list
+- 📱 **Responsive Design** – Looks great on all screen sizes
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/tijani-web/exten-board
+cd extenboard
+npm install
+npm start
