@@ -1,0 +1,335 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Neutral color palette */
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  /* Text colors */
+  --header-text-color: var(--neutral-0);      /* darker neutral for header */
+  --subheading-text-color: var(--neutral-200);  /* lighter neutral for subheading */
+}
+
+
+body{
+background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
+
+}
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 500;
+}
+/* Global transition */
+* {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* DARK MODE (default) */
+/* General transition for smoothness */
+* {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* HEADER style */
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(225, 23%, 24%) ;
+  border-radius: 15px;
+  margin-top: 2rem;
+  padding: 0.3rem 1rem;
+}
+.settings{
+  background: hsl(226, 20%, 28%) ;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* SUBHEADING STYLE   */
+.sub-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.name h1{
+  color: var(--header-text-color);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+.modes{
+  display: flex;
+  align-items: center;
+  color: var(--neutral-300);
+}
+.modes p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 0.5rem;
+  padding: 10px 20px;
+  background: hsl(226, 20%, 28%) ;
+  border-radius: 250px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modes p.active-btn {
+  background-color: red;
+  color: white;
+}
+#all{
+  background: hsl(3, 77%, 44%);
+}
+
+.modes p.active-btn {
+  background-color: red;
+  color: white;
+}
+
+
+/* EXTENSION GRID STYLE   */
+.extensions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 50px;
+}
+
+.card {
+  background-color: hsl(226, 25%, 17%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 200px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.extension-info {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.ex-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.details {
+  flex: 1;
+}
+
+.ext-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--neutral-0);
+}
+
+.ext-desc {
+  font-size: 0.875rem;
+  color: var(--neutral-300);
+  line-height: 1.4;
+}
+
+.dpl-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Push to bottom */
+}
+
+.dpl-btn p {
+  color: var(--subheading-text-color);
+  border: 1px solid var(--subheading-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 250px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+
+.dpl-btn p:hover {
+  border: 1px solid #ff6f6f ;
+}
+
+.switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+/* When active */
+.switch.active {
+  background: hsl(3, 71%, 56%);
+}
+
+.switch.active::before {
+  left: 22px;
+}
+
+
+/* ======= DARK MODE (Default) ======= */
+body.dark {
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  color: #fff;
+}
+body.dark .header{
+  background: hsl(225, 23%, 24%) ;
+  
+}
+body.dark .card {
+  background-color: hsl(226, 25%, 17%);
+  color: white;
+}
+body.dark .name h1{
+  color: var(--header-text-color);
+}
+body.dark .modes p{
+  background: hsl(226, 20%, 28%) ;
+  color: white;
+}
+body.dark .modes p.active-btn {
+  background-color: red;
+  color: white;
+}
+body.dark #all{
+  background: hsl(3, 77%, 44%);
+}
+body.dark .ext-name,
+body.dark .ext-desc,
+body.dark .sub-heading,
+body.dark .dpl-btn p {
+  color: white;
+}
+
+/* ======= LIGHT MODE ======= */
+body {
+  background: hsl(200, 60%, 99%);
+  color: #111;
+}
+.header{
+  background: hsl(200, 60%, 99%);
+  border: 1px solid black;
+}
+.modes{
+  color: hsl(227, 75%, 14%);
+}
+
+.modes p{
+  background-color: hsl(217, 61%, 90%);
+  color: hsl(227, 75%, 14%);
+  border: 1px solid hsl(226, 25%, 17%);
+}
+.modes p.active-btn {
+
+}
+.name h1{
+  color: hsl(227, 75%, 14%);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+.card {
+  background-color: #ffffff;
+  color: #111;
+}
+
+.ext-name,
+.ext-desc,
+.sub-heading,
+.dpl-btn p {
+  color: #111;
+}
+
+/* Theme toggle icon button (optional style) */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+
+
+/* RESPONSIVENESS */
+@media (max-width:1024px) {
+  .sub-heading{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .extensions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 50px;
+}
+
+.card {
+  padding: 1.3rem;
+}
+}
+
+@media (max-width:768px) {
+   .sub-heading{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .extensions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 50px;
+}
+.card {
+  padding: 1.2rem;
+}
+.sub-heading{
+  flex-direction: column;
+  padding-top: 20px;
+}
+.modes{
+  padding-top: 15px;
+}
+}
